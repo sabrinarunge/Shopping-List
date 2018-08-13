@@ -39,7 +39,7 @@ public class ShoppingList
                     list.add(words[1]);
                     break;
                 case "PRINT":
-                    System.out.println(list);
+                    printList();
                     break;
                 case "REMOVE":
                     list.remove(words[1]);
@@ -49,6 +49,9 @@ public class ShoppingList
                     break;
                 case "EXIT":
                     exit = true;
+                default:
+                    System.out.println("Please enter a valid command");
+                    break;
 
             }
 
@@ -72,6 +75,14 @@ public class ShoppingList
 
     }
 
+
+    private void printList()
+    {
+        for (int i = 0; i < list.size(); i++)
+        {
+            System.out.println(i + " : " + list.get(i));
+        }
+    }
     private void printMenu()
     {
 
